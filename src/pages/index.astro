@@ -2,17 +2,26 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Badge from "../components/Badge.astro";
+import Experience from "../components/Experience.astro";
+import Technologies from "../components/Technologies.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="LMHV Portfolio.">
 	<main>
-		<section class="w-full mx-auto lg:w-[800px] py-44">
-			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-3">
-				Hey, I'm Luis Herrero
-				<Badge>Available for hire</Badge>
-			</h1>
+		<section class="w-full mx-auto lg:w-[1200px] py-44 px-40">
+			<div class="flex flex-row justify-between px-10">
+				<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4">
+					Hey, I'm Luis Herrero
+				</h1>
+				<Badge
+					href="https://www.linkedin.com/in/lmhv/"
+					class="bg-slate-900 hover:bg-slate-600 text-blue-400 border-blue-400"
+				>
+					Available for hire
+				</Badge>
+			</div>
 
-			<h2 class="text-white text-2xl font-thin">
+			<h2 class="text-white text-2xl font-thin my-10">
 				I'm an <span class="text-blue-600">Arg</span>e<span
 					class="text-yellow-500">nt</span
 				>in<span class="text-blue-600">ean</span>
@@ -20,7 +29,10 @@ import Badge from "../components/Badge.astro";
 				learn and improve
 			</h2>
 
-			<ul></ul>
+			<Technologies />
+		</section>
+		<section class="w-full mx-auto lg:w-[1200px] py-44 px-40">
+			<Experience />
 		</section>
 	</main>
 </Layout>

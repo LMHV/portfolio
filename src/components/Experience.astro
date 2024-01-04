@@ -1,0 +1,35 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCE = [
+  {
+    date: 'Febrary 2022',
+    title: 'Best wey trip Application',
+    description: "It was a university project where i delevoped a Flutter app where ...",
+    link: 'https://www.github.com/repo',
+  },
+  {
+    date: 'Febrary 2021',
+    title: 'Best wey trip Application',
+    description: "It was a university project where i delevoped a Flutter app where ...",
+    link: 'https://www.github.com/repo',
+  },
+  {
+    date: 'Febrary 2018',
+    title: 'Best wey trip Application',
+    description: "It was a university project where i delevoped a Flutter app where ...",
+    link: 'https://www.github.com/repo',
+  },
+]
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+  {
+    EXPERIENCE.map(experience => (
+    <li class="mb-10 ms-4">
+      <ExperienceItem {... experience} />
+    </li>
+    ))
+  }            
+</ol>
+
