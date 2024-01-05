@@ -3,33 +3,28 @@ import ExperienceItem from "./ExperienceItem.astro";
 
 const EXPERIENCE = [
   {
-    date: 'Febrary 2022',
-    title: 'Best wey trip Application',
-    description: "It was a university project where i delevoped a Flutter app where ...",
-    link: 'https://www.github.com/repo',
+    date: "December 2022 - Present",
+    title: "Full-stack developer - Python",
+    description:
+      "I developed an entire system for a gas distribution company called Nalux S.A. located on San Juan, Argentina. It was a managment desktop app with data analysis developed with Python and MongoDB.",
+    link: "https://github.com/LMHV/python_nalux_app",
   },
   {
-    date: 'Febrary 2021',
-    title: 'Best wey trip Application',
-    description: "It was a university project where i delevoped a Flutter app where ...",
-    link: 'https://www.github.com/repo',
+    date: "September 2022",
+    title: "Unit Testing - Selenium",
+    description:
+      "I did an internship on a company called Popapp.io - Tally located on San Juan, Argentina. It was a restaurant managment web app where I developed a few python scripts with selenium to test the proper operation of the page.",
+    link: "https://github.com",
   },
-  {
-    date: 'Febrary 2018',
-    title: 'Best wey trip Application',
-    description: "It was a university project where i delevoped a Flutter app where ...",
-    link: 'https://www.github.com/repo',
-  },
-]
+];
 ---
 
-<ol class="relative border-s border-gray-200 dark:border-gray-700">
+<ol class="relative border-s border-gray-200 ml-3">
   {
-    EXPERIENCE.map(experience => (
-    <li class="mb-10 ms-4">
-      <ExperienceItem {... experience} />
-    </li>
+    EXPERIENCE.map((experience) => (
+      <li class="mb-12 ms-4">
+        <ExperienceItem {...experience} />
+      </li>
     ))
-  }            
+  }
 </ol>
-

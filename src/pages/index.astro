@@ -4,35 +4,50 @@ import Card from "../components/Card.astro";
 import Badge from "../components/Badge.astro";
 import Experience from "../components/Experience.astro";
 import Technologies from "../components/Technologies.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import CodeIcon from "../components/icons/Code.astro";
+import "../globals.css";
+import BriefcaseIcon from "@/components/icons/Briefcase.astro";
+import Projects from "@/components/Projects.astro";
 ---
 
 <Layout title="LMHV Portfolio.">
 	<main>
-		<section class="w-full mx-auto lg:w-[1200px] py-44 px-40">
-			<div class="flex flex-row justify-between px-10">
-				<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4">
-					Hey, I'm Luis Herrero
-				</h1>
+		<SectionContainer id="home" class="mt-48 mb-20">
+			<div class="flex flex-col md:flex-row gap-x-5 gap-y-5 items-center">
+				<h1 class="text-white text-5xl font-bold">Hey, I'm LMHV</h1>
 				<Badge
 					href="https://www.linkedin.com/in/lmhv/"
-					class="bg-slate-900 hover:bg-slate-600 text-blue-400 border-blue-400"
+					class="bg-slate-900 hover:bg-slate-600 text-blue-400 border-blue-400 min-w-10"
 				>
 					Available for hire
 				</Badge>
 			</div>
 
 			<h2 class="text-white text-2xl font-thin my-10">
-				I'm an <span class="text-blue-600">Arg</span>e<span
-					class="text-yellow-500">nt</span
-				>in<span class="text-blue-600">ean</span>
-				Full-stack developer. I specialize on Web and Mobile development. Eager to
-				learn and improve
+				An Argentinean <span class="text-blue-400"
+					>Full-stack software developer</span
+				>. I specialize on Web and Mobile development. Eager to learn and
+				improve.
 			</h2>
 
 			<Technologies />
-		</section>
-		<section class="w-full mx-auto lg:w-[1200px] py-44 px-40">
+		</SectionContainer>
+
+		<SectionContainer id="experience" class="py-10 items-center justify-center">
+			<h1 class="flex gap-x-3 text-2xl mb-7 text-white">
+				<BriefcaseIcon class="size-8" />
+				Job Experience
+			</h1>
 			<Experience />
-		</section>
+		</SectionContainer>
+
+		<SectionContainer id="projects" class="py-10 items-center justify-center">
+			<h1 class="flex gap-x-3 text-2xl mb-7 text-white">
+				<CodeIcon class="size-8" />
+				Projects
+			</h1>
+			<Projects />
+		</SectionContainer>
 	</main>
 </Layout>
