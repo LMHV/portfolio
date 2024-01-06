@@ -1,0 +1,26 @@
+---
+interface Props {
+  hoverBackgroundColor?: string;
+  hoverBorderColor?: string;
+  hoverFontColor?: string;
+}
+
+const {
+  hoverBackgroundColor,
+  hoverBorderColor,
+  hoverFontColor = "hover:text-black",
+} = Astro.props;
+---
+
+<div
+  class={`
+  bg-white/5 border-white/30 hover:scale-125 ${hoverBackgroundColor} ${hoverBorderColor}
+  ${hoverFontColor} hover:font-semibold text-white
+  text-sm font-normal
+  mx-2 my-1 px-5 py-1
+  rounded-lg border
+  transition
+  items-center justify-center`}
+>
+  <slot />
+</div>
