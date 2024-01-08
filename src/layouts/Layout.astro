@@ -1,5 +1,6 @@
 ---
 import Header from "../components/Header.astro";
+import Footer from "@/components/Footer.astro";
 import "@fontsource-variable/onest";
 
 interface Props {
@@ -22,6 +23,7 @@ const { title } = Astro.props;
 	<body>
 		<Header />
 		<slot />
+		<Footer />
 	</body>
 </html>
 
@@ -34,7 +36,7 @@ const { title } = Astro.props;
 		scroll-behavior: smooth;
 	}
 	body {
-		background: linear-gradient(145deg, #02082e, #013022);
+		background: linear-gradient(145deg, #02082e, #02573d);
 		display: flex;
 		flex-direction: column;
 		height: 100%;

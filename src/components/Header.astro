@@ -1,25 +1,43 @@
-<header class="flex justify-between item-center py-5 mx-auto">
+<header
+  class={`
+    flex justify-center items-center
+    mx-auto
+    py-5
+    sticky top-0
+    w-full xl:w-[1120px]
+    z-10
+  `}
+>
   <nav
-    class="flex flex-row gap-x-4 sm:gap-x-10 lg:gap-x-20 opacity-90 text-lg text-neutral-100"
+    class={`
+      border border-black rounded-full
+      px-3 py-1
+      flex flex-row items-center
+      bg-neutral-900/70
+      backdrop-blur-md
+      font-semibold
+      text-white
+      gap-x-2
+    `}
   >
     <a
-      class="font-thin text-sm sm:text-base md:text-lg text-white/75 hover:text-white/100 hover:scale-110 transition-all duration-100"
+      class="hover:bg-white/10 rounded-full px-3 py-0.5 transition"
       href="#home">Home</a
     >
     <a
-      class="font-thin text-sm sm:text-base md:text-lg text-white/75 hover:text-white/100 hover:scale-110 transition-all duration-100"
+      class="hover:bg-white/10 rounded-full px-3 py-0.5 transition"
       href="#experience">Experience</a
     >
     <a
-      class="font-thin text-sm sm:text-base md:text-lg text-white/75 hover:text-white/100 hover:scale-110 transition-all duration-100"
+      class="hover:bg-white/10 rounded-full px-3 py-0.5 transition"
       href="#projects">Projects</a
     >
     <a
-      class="font-thin text-sm sm:text-base md:text-lg text-white/75 hover:text-white/100 hover:scale-110 transition-all duration-100"
+      class="hover:bg-white/10 rounded-full px-3 py-0.5 transition"
       href="#about">About</a
     >
     <a
-      class="font-thin text-sm sm:text-base md:text-lg text-white/75 hover:text-white/100 hover:scale-110 transition-all duration-100"
+      class="hover:bg-white/10 rounded-full px-3 py-0.5 transition"
       href="#contact">Contact</a
     >
   </nav>

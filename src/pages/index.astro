@@ -14,7 +14,9 @@ import Projects from "@/components/Projects.astro";
 <Layout title="LMHV Portfolio.">
 	<main>
 		<SectionContainer id="home" class="mt-36 lg:mt-64">
-			<div class="flex flex-col md:flex-row gap-x-5 gap-y-5 items-center text-center sm:text-left">
+			<div
+				class="flex flex-col md:flex-row gap-x-5 gap-y-5 items-center text-center sm:text-left"
+			>
 				<h1 class="text-white text-5xl font-bold">Hey, I'm LMHV</h1>
 				<Badge
 					href="https://www.linkedin.com/in/lmhv/"
@@ -34,7 +36,10 @@ import Projects from "@/components/Projects.astro";
 			<Technologies />
 		</SectionContainer>
 
-		<SectionContainer id="experience" class="py-10 items-center justify-center mt-20 lg:mt-40">
+		<SectionContainer
+			id="experience"
+			class="py-10 items-center justify-center mt-20 lg:mt-40"
+		>
 			<h1 class="flex gap-x-3 text-2xl mb-7 text-white">
 				<BriefcaseIcon class="size-8" />
 				Job Experience
@@ -42,9 +47,9 @@ import Projects from "@/components/Projects.astro";
 			<Experience />
 		</SectionContainer>
 
-		<SectionContainer id="projects" class="py-10  flex flex-col">
+		<SectionContainer id="projects" class="py-10 flex flex-col">
 			<h1 class="flex items-center gap-x-3 text-2xl mb-7 text-white">
-				<CodeIcon class="size-8" />
+				<CodeIcon class="size-10" />
 				Projects
 			</h1>
 			<Projects />

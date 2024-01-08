@@ -1,7 +1,13 @@
 ---
 import TechBadge from "./TechBadge.astro";
-
 import { TAGS } from "../utils/Tags";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const PROJECTS = [
   {
@@ -13,48 +19,42 @@ const PROJECTS = [
     tags: [TAGS.PYTHON, TAGS.MONGODB, TAGS.QT],
   },
   {
-    title: "Project",
-    description: "Desc",
+    title: "Flutter App",
+    description: "Event's marketing app",
     link: "",
     github: "",
-    image: "",
-    tags: [],
+    image: "/images/flutter_project.webp",
+    tags: [TAGS.DART, TAGS.FLUTTER, TAGS.MONGODB],
   },
   {
-    title: "Project",
-    description: "Desc",
+    title: "Herrero&Asoc",
+    description:
+      "Webpage for a Customs Brokers company located in San Juan, Argentina",
     link: "",
     github: "",
-    image: "",
-    tags: [],
-  },
-  {
-    title: "Project",
-    description: "Desc",
-    link: "",
-    github: "",
-    image: "",
-    tags: [],
+    image: "/images/herreroasoc_project.webp",
+    tags: [
+      TAGS.JAVASCRIPT,
+      TAGS.NODEJS,
+      TAGS.EXPRESSJS,
+      TAGS.BOOTSTRAP,
+      TAGS.HTML,
+    ],
   },
 ];
 ---
 
 {
   PROJECTS.map(({ title, description, tags, link, github, image }) => (
-    <article>
-      <h2 class="text-2xl text-gray-200 font-semibold">{title}</h2>
+    <article class="p-5 mb-5">
+      <h2 class="text-xl text-blue-200 font-medium">{title}</h2>
       <p class="text-md text-gray-400 font-thin">{description}</p>
 
-      <img
-        class="mt-6 rounded-2xl border-2 border-gray-100 shadow-lg shadow-black hover:scale-105 transition-all duration-150"
-        src={image}
-        alt={title}
-      />
-      <ul class="flex gap-x-2 flex-row mb-2 mt-6 items-center justify-center">
+      <ul class="flex gap-x-2 flex-row mb-2 mt-6 items-center">
         {tags.map((tag) => (
           <li class="items-center justify-center ">
             <span
-              class={`flex gap-x-2 rounded-full text-sm font-medium px-4 ${tag.class} py-1 border `}
+              class={`flex gap-x-2 rounded-lg text-sm font-medium px-4 ${tag.class} py-1 border `}
             >
               <tag.icon class="size-6 " />
               {tag.name}
@@ -62,6 +62,11 @@ const PROJECTS = [
           </li>
         ))}
       </ul>
+      <img
+        class="mt-6 rounded-2xl shadow-lg shadow-black hover:scale-105 transition-all duration-150"
+        src={image}
+        alt={title}
+      />
     </article>
   ))
 }
