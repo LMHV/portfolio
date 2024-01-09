@@ -50,9 +50,9 @@ const PROJECTS = [
       <h2 class="text-xl text-blue-200 font-medium">{title}</h2>
       <p class="text-md text-gray-400 font-thin">{description}</p>
 
-      <ul class="flex gap-x-2 flex-row mb-2 mt-6 items-center">
+      <ul class="flex gap-x-2 flex-row mb-2 mt-6 items-center flex-wrap">
         {tags.map((tag) => (
-          <li class="items-center justify-center ">
+          <li class="items-center justify-center mb-2">
             <span
               class={`flex gap-x-2 rounded-lg text-sm font-medium px-4 ${tag.class} py-1 border `}
             >
