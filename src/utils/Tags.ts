@@ -15,17 +15,17 @@ export const TAGS = {
   REACT: {
     name: 'React',
     icon: React,
-    class: 'text-white bg-'
+    class: ''
   },
   PYTHON: {
     name: 'Python',
     icon: Python,
-    class: 'text-sky-600',
+    class: 'text-white',
   },
   MONGODB: {
     name: 'MongoDB',
     icon: MongoDB,
-    class: 'text-green-600',
+    class: 'text-white',
   },
   QT: {
     name: 'Qt',
@@ -35,42 +35,42 @@ export const TAGS = {
   BOOTSTRAP: {
     name: 'Bootstrap',
     icon: Bootstrap,
-    class: 'text-[#7b1be9]',
+    class: 'text-white',
   },
   JAVASCRIPT: {
     name: 'Javascript',
     icon: Javascript,
-    class: 'text-[#e2cf51]',
+    class: 'text-white',
   },
   HTML: {
     name: 'HTML',
     icon: Html,
-    class: 'text-[#d6512c]'
+    class: 'text-white'
   },
   CSS: {
     name: 'CSS',
     icon: Css,
-    class: 'text-[#1571af]',
+    class: 'text-white',
   },
   NODEJS: {
     name: 'NodeJs',
     icon: Nodejs,
-    class: 'text-[#559846]'
+    class: 'text-white'
   },
   EXPRESSJS: {
     name: 'ExpressJs',
     icon: Expressjs,
-    class: 'text-neutral-300'
+    class: 'text-white'
   },
   FLUTTER: {
     name: 'Flutter',
     icon: Flutter,
-    class: 'text-neutral-300'
+    class: 'text-white'
   },
   DART: {
     name: 'Dart',
     icon: Dart,
-    class: 'text-neutral-300'
+    class: 'text-white'
   },
 
 }

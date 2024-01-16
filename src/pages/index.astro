@@ -9,31 +9,35 @@ import CodeIcon from "../components/icons/Code.astro";
 import "../globals.css";
 import BriefcaseIcon from "@/components/icons/Briefcase.astro";
 import Projects from "@/components/Projects.astro";
+import User from "@/components/icons/User.astro";
+import Container from "@/components/Container.astro";
 ---
 
 <Layout title="LMHV Portfolio.">
 	<main>
 		<SectionContainer id="home" class="mt-36 lg:mt-64">
-			<div
-				class="flex flex-col md:flex-row gap-x-5 gap-y-5 items-center text-center sm:text-left"
-			>
-				<h1 class="text-white text-5xl font-bold">Hey, I'm LMHV</h1>
-				<Badge
-					href="https://www.linkedin.com/in/lmhv/"
-					class="bg-slate-900 hover:bg-slate-600 text-blue-400 border-blue-400 min-w-10"
+			<Container>
+				<div
+					class="flex flex-col md:flex-row gap-x-5 gap-y-5 items-center text-center sm:text-left"
 				>
-					Available for hire
-				</Badge>
-			</div>
+					<h1 class="text-white text-5xl font-bold">¡Hey! I'm Luis Herrero</h1>
+					<Badge
+						href="https://www.linkedin.com/in/lmhv/"
+						class="bg-slate-900 hover:bg-slate-600 text-blue-400 border-blue-400 min-w-10"
+					>
+						Available for hire
+					</Badge>
+				</div>
 
-			<h2 class="text-white text-2xl font-thin my-10">
-				An Argentinean <span class="text-blue-400"
-					>Full-stack software developer</span
-				>. I specialize on Web and Mobile development. Eager to learn and
-				improve.
-			</h2>
+				<h2 class="text-white text-2xl font-thin my-10">
+					An Argentinean <span class="text-blue-400"
+						>Full-stack software developer</span
+					>. I specialize on Web and Mobile development. Eager to learn and
+					improve.
+				</h2>
 
-			<Technologies />
+				<Technologies />
+			</Container>
 		</SectionContainer>
 
 		<SectionContainer
@@ -48,11 +52,46 @@ import Projects from "@/components/Projects.astro";
 		</SectionContainer>
 
 		<SectionContainer id="projects" class="py-10 flex flex-col">
-			<h1 class="flex items-center gap-x-3 text-2xl mb-7 text-white">
-				<CodeIcon class="size-10" />
+			<h1
+				class="flex items-center justify-center text-3xl font-bold text-white"
+			>
 				Projects
 			</h1>
+			<p class="text-gray-500 font-medium flex justify-center">
+				Here are some projects I've working during my Developer Lifetime
+			</p>
 			<Projects />
+		</SectionContainer>
+
+		<SectionContainer id="about" class="my-10">
+			<h1 class="flex items-center gap-x-3 text-2xl text-white">
+				<User class="size-8" />
+				About me
+			</h1>
+			<p class="mt-10 mb-2 text-white/60 font-thin">
+				I'm <span class="font-semibold text-lg">L</span>uis <span
+					class="font-semibold text-lg">M</span
+				>atias <span class="font-semibold text-lg">H</span>errero <span
+					class="font-semibold text-lg">V</span
+				>idaña, a regular guy who has loved technology since birth. Eager to
+				learn and contribute to the world with my knowledge and skills. I am an
+				extremely organized and responsible individual, with a love for detail.
+				I consider myself capable of achieving anything I set my mind to, always
+				maintaining humility.
+			</p>
+			<p class="mb-2 text-white/60 font-thin">
+				I'm a native Spanish speaker, and I have been studying English since I
+				was a child. I have attended bilingual schools and have also taken
+				several international exams, such as the FIRST Cambridge Exam.
+			</p>
+			<p class="mb-2 text-white/60 font-thin">
+				I began my journey in software development when I chose my university
+				career around 2018. My initial projects outside the university
+				environment were some games developed in Unity and C#. Later, I delved
+				into web development, starting with the MERN stack. I explored Flutter
+				and Dart for mobile development. Finally, I started my first formal job
+				developing for a gas distribution company using Python and MongoDB.
+			</p>
 		</SectionContainer>
 	</main>
 </Layout>
