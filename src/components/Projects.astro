@@ -13,28 +13,45 @@ import Stack from "./icons/Stack.astro";
 
 const PROJECTS = [
   {
-    title: "Nalux SA",
+    className: "lg:row-span-3",
+    title: "Nalux S.A.",
     description: "Management Desktop App for a gas distribution company",
+    type: "WORK EXPERIENCE",
     link: "",
     github: "Private",
     image: "/images/nalux_project.webp",
     tags: [TAGS.PYTHON, TAGS.MONGODB, TAGS.QT],
   },
   {
+    className: "lg:row-span-2",
+    title: "LHMR",
+    description: "Stock Management App",
+    type: "DUO PROJECT",
+    link: "https://lhmr.vercel.app",
+    github: "",
+    image: "/images/lmhrwhite.webp",
+    tags: [TAGS.REACT, TAGS.NODEJS, TAGS.JAVASCRIPT, TAGS.EXPRESSJS],
+  },
+  
+  {
+    className: "lg:row-span-3",
     title: "Flutter App",
     description: "Event's marketing app",
+    type: "SOLO PROJECT",
     link: "",
     github: "",
     image: "/images/flutter_project.webp",
     tags: [TAGS.DART, TAGS.FLUTTER, TAGS.NODEJS, TAGS.MONGODB],
   },
   {
+    className: "lg:row-span-2",
     title: "Herrero&Asoc",
     description:
       "Webpage for a Customs Brokers company located in San Juan, Argentina",
+    type: "WORK EXPERIENCE",
     link: "",
     github: "",
-    image: "/images/herreroasoc_project.webp",
+    image: "/images/herreroasoc.webp",
     tags: [
       TAGS.JAVASCRIPT,
       TAGS.NODEJS,
@@ -46,35 +63,43 @@ const PROJECTS = [
 ];
 ---
 
-{
-  PROJECTS.map(({ title, description, tags, link, github, image }) => (
-    <Container class="relative flex flex-col rounded-3xl my-4 p-6 gap-3 border-2 border-transparent overflow-hidden row-span-1 col-span-8 dark:bg-raisin-black lg:p-8 lg:row-span-3 xl:col-span-4 h-[350px] sm:h-[400px] md:h-[500px] lg:h-[600px]">
-      <article class="">
-        <div class="mb-3 flex items-center gap-3 opacity-60 text-white">
-          <Stack class="size-5 " />
-          <h3 class="font-semibold text-gray-300">WORK EXPERIENCE</h3>
-        </div>
-        <h2 class="text-2xl text-white font-bold">{title}</h2>
-        <p class="text-sm text-gray-500 font-semibold">{description}</p>
+<div
+  class="w-full grid grid-cols-8 auto-rows-[380px] lg:auto-rows-[170px] gap-6 md:gap-3"
+>
+  {
+    PROJECTS.map(
+      ({ title, description, tags, link, github, image, className, type }) => (
+        <Container
+          class={`relative flex flex-col rounded-3xl p-6 overflow-hidden w-full row-span-1 col-span-8  lg:p-8  lg:col-span-4 ${className}`}
+        >
+          <article>
+            <div class="mb-3 flex items-center gap-3 opacity-60 text-white">
+              <Stack class="size-5 " />
+              <h3 class="font-semibold text-gray-300">{type}</h3>
+            </div>
+            <h2 class="text-2xl text-white font-bold">{title}</h2>
+            <p class="text-sm text-gray-500 font-semibold">{description}</p>
 
-        <ul class="flex gap-x-2 flex-row mb-2 mt-2 items-center flex-wrap">
-          {tags.map((tag) => (
-            <li class="items-center justify-center mb-2">
-              <span
-                class={`flex gap-x-2 rounded-xl text-xs lg:text-sm font-medium px-2 lg:px-4 ${tag.class} py-1 border `}
-              >
-                <tag.icon class=" size-4 lg:size-6 " />
-                {tag.name}
-              </span>
-            </li>
-          ))}
-        </ul>
-        <img
-          class="absolute -right-10 w-full rounded-2xl object-cover z-[1] transition-all duration-300 lg:-right-12 lg:top-48 false"
-          src={image}
-          alt={title}
-        />
-      </article>
-    </Container>
-  ))
-}
+            <ul class="flex gap-x-2 flex-row mb-2 mt-2 items-center flex-wrap">
+              {tags.map((tag) => (
+                <li class="items-center justify-center mb-2">
+                  <span
+                    class={`flex gap-x-2 rounded-xl text-xs lg:text-sm font-medium px-2 lg:px-4 ${tag.class} py-1 border `}
+                  >
+                    <tag.icon class=" size-4 lg:size-6 " />
+                    {tag.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <img
+              class="absolute -right-10 rounded-2xl object-contain z-[1]  transition-all duration-300 lg:-right-12 lg:top-50 false"
+              src={image}
+              alt={title}
+            />
+          </article>
+        </Container>
+      ),
+    )
+  }
+</div>

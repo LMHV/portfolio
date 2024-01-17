@@ -15,7 +15,7 @@ export const TAGS = {
   REACT: {
     name: 'React',
     icon: React,
-    class: ''
+    class: 'text-white',
   },
   PYTHON: {
     name: 'Python',
