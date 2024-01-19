@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/carousel";
 import Container from "./Container.astro";
 import Stack from "./icons/Stack.astro";
+import ArrowUpRight from "./icons/ArrowUpRight.astro";
 
 const PROJECTS = [
   {
@@ -32,13 +33,13 @@ const PROJECTS = [
     image: "/images/lmhrwhite.webp",
     tags: [TAGS.REACT, TAGS.NODEJS, TAGS.JAVASCRIPT, TAGS.EXPRESSJS],
   },
-  
+
   {
     className: "lg:row-span-3",
-    title: "Flutter App",
-    description: "Event's marketing app",
+    title: "EnTodas SJ",
+    description: "Event's marketing app. As an event ",
     type: "SOLO PROJECT",
-    link: "",
+    link: "https://github.com/LMHV/EnTodasSJEventos",
     github: "",
     image: "/images/flutter_project.webp",
     tags: [TAGS.DART, TAGS.FLUTTER, TAGS.NODEJS, TAGS.MONGODB],
@@ -50,7 +51,7 @@ const PROJECTS = [
       "Webpage for a Customs Brokers company located in San Juan, Argentina",
     type: "WORK EXPERIENCE",
     link: "",
-    github: "",
+    github: "Private",
     image: "/images/herreroasoc.webp",
     tags: [
       TAGS.JAVASCRIPT,
@@ -77,6 +78,17 @@ const PROJECTS = [
               <Stack class="size-5 " />
               <h3 class="font-semibold text-gray-300">{type}</h3>
             </div>
+            <h3 class="absolute top-8 right-20 text-white/30 font-semibold">
+              {github}
+            </h3>
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener"
+              class="absolute p-1 top-7 right-7 border border-white rounded-full text-white hover:bg-white/5"
+            >
+              <ArrowUpRight />
+            </a>
             <h2 class="text-2xl text-white font-bold">{title}</h2>
             <p class="text-sm text-gray-500 font-semibold">{description}</p>
 
