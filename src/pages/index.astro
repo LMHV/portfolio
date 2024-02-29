@@ -1,22 +1,19 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
-import Badge from "../components/Badge.astro";
-import Experience from "../components/Experience.astro";
-import Technologies from "../components/Technologies.astro";
-import SectionContainer from "../components/SectionContainer.astro";
-import CodeIcon from "../components/icons/Code.astro";
 import "../globals.css";
-import BriefcaseIcon from "@/components/icons/Briefcase.astro";
+import Layout from "../layouts/Layout.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
 import Projects from "@/components/Projects.astro";
-import User from "@/components/icons/User.astro";
 import Container from "@/components/Container.astro";
 import IconButton from "@/components/IconButton.astro";
 import GithubIcon from "@/components/icons/Github.astro";
 import LinkedinIcon from "@/components/icons/Linkedin.astro";
+import Header from "@/components/Header.astro";
 ---
 
 <Layout title="LMHV Portfolio.">
+	<Header />
+
 	<main>
 		<SectionContainer
 			id="home"
@@ -27,7 +24,7 @@ import LinkedinIcon from "@/components/icons/Linkedin.astro";
 			>
 				<img
 					src="/images/FotoCV.png"
-					alt="CV image"
+					alt="Personal image"
 					class="absolute w-full h-full object-cover left-0 top-0"
 				/>
 				<div
@@ -57,8 +54,7 @@ import LinkedinIcon from "@/components/icons/Linkedin.astro";
 				<div class="flex flex-col gap-y-3">
 					<h1 class="text-white text-2xl font-semibold">About</h1>
 					<p class="text-gray-500 font-medium">
-						An Argentinean Full-stack software developer. I specialize on Web
-						and Mobile development. Eager to learn and improve.
+						A proactive and responsible software developer with a focus on full-stack development, holding a bachelor’s degree in computer science.
 					</p>
 				</div>
 			</Container>
@@ -74,27 +70,31 @@ import LinkedinIcon from "@/components/icons/Linkedin.astro";
 			</Container>
 		</SectionContainer>
 
+		<SectionContainer
+			id="experience"
+			class="py-10 items-center justify-center mt-10 lg:mt-14"
+		>
+			<h2 class="flex items-center justify-center gap-x-3 text-3xl font-bold text-white">
+				Job Experience
+			</h2>
+			<p class="text-gray-500 font-medium flex justify-center mb-7">
+				Profesional experience I've had during my Developer Lifetime
+			</p>
+			<Experience />
+		</SectionContainer>
+
 		<SectionContainer id="projects" class="py-10 flex flex-col mt-7">
-			<h1
+			<h2
 				class="flex items-center justify-center text-3xl font-bold text-white"
 			>
 				Projects
-			</h1>
+			</h2>
 			<p class="text-gray-500 font-medium flex justify-center mb-7">
 				Here are some projects I've working during my Developer Lifetime
 			</p>
 			<Projects />
 		</SectionContainer>
 
-		<SectionContainer
-			id="experience"
-			class="py-10 items-center justify-center mt-10 lg:mt-14"
-		>
-			<h1 class="flex gap-x-3 text-2xl mb-7 text-white">
-				<BriefcaseIcon class="size-8" />
-				Job Experience
-			</h1>
-			<Experience />
-		</SectionContainer>
+		
 	</main>
 </Layout>

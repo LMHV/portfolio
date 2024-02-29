@@ -1,67 +1,8 @@
 ---
-import TechBadge from "./TechBadge.astro";
-import { TAGS } from "../utils/Tags";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+import { PROJECTS } from "../utils/Projects.ts";
 import Container from "./Container.astro";
-import Stack from "./icons/Stack.astro";
 import ArrowUpRight from "./icons/ArrowUpRight.astro";
-
-const PROJECTS = [
-  {
-    className: "lg:row-span-3",
-    title: "Nalux S.A.",
-    description: "Management Desktop App for a gas distribution company",
-    type: "WORK EXPERIENCE",
-    link: "",
-    github: "Private",
-    image: "/images/nalux_project.webp",
-    tags: [TAGS.PYTHON, TAGS.MONGODB, TAGS.QT],
-  },
-  {
-    className: "lg:row-span-2",
-    title: "LHMR",
-    description: "Stock Management App",
-    type: "DUO PROJECT",
-    link: "https://lhmr.vercel.app",
-    github: "",
-    image: "/images/lmhrwhite.webp",
-    tags: [TAGS.REACT, TAGS.NODEJS, TAGS.JAVASCRIPT, TAGS.EXPRESSJS],
-  },
-
-  {
-    className: "lg:row-span-3",
-    title: "EnTodas SJ",
-    description: "Event's marketing app. As an event ",
-    type: "SOLO PROJECT",
-    link: "https://github.com/LMHV/EnTodasSJEventos",
-    github: "",
-    image: "/images/flutter_project.webp",
-    tags: [TAGS.DART, TAGS.FLUTTER, TAGS.NODEJS, TAGS.MONGODB],
-  },
-  {
-    className: "lg:row-span-2",
-    title: "Herrero&Asoc",
-    description:
-      "Webpage for a Customs Brokers company located in San Juan, Argentina",
-    type: "WORK EXPERIENCE",
-    link: "",
-    github: "Private",
-    image: "/images/herreroasoc.webp",
-    tags: [
-      TAGS.JAVASCRIPT,
-      TAGS.NODEJS,
-      TAGS.EXPRESSJS,
-      TAGS.BOOTSTRAP,
-      TAGS.HTML,
-    ],
-  },
-];
+import Stack from "./icons/Stack.astro";
 ---
 
 <div
@@ -74,21 +15,29 @@ const PROJECTS = [
           class={`relative flex flex-col rounded-3xl p-6 overflow-hidden w-full row-span-1 col-span-8  lg:p-8  lg:col-span-4 ${className}`}
         >
           <article>
-            <div class="mb-3 flex items-center gap-3 opacity-60 text-white">
+            <div class="mb-3 flex items-center gap-3 opacity-60 text-white ">
               <Stack class="size-5 " />
               <h3 class="font-semibold text-gray-300">{type}</h3>
             </div>
-            <h3 class="absolute top-8 right-20 text-white/30 font-semibold">
+            <h3 class="absolute top-8 right-20 text-white/30 font-semibold ">
               {github}
             </h3>
+
             <a
               href={link}
               target="_blank"
               rel="noopener"
-              class="absolute p-1 top-7 right-7 border border-white rounded-full text-white hover:bg-white/5"
+              class:list={[
+                "absolute p-1 top-7 right-7 border border-white rounded-full text-white hover:bg-white/5",
+                {
+                  "pointer-events-none opacity-10": !link,
+                  "": link,
+                },
+              ]}
             >
               <ArrowUpRight />
             </a>
+
             <h2 class="text-2xl text-white font-bold">{title}</h2>
             <p class="text-sm text-gray-500 font-semibold">{description}</p>
 
@@ -115,3 +64,5 @@ const PROJECTS = [
     )
   }
 </div>
+
+<script></script>

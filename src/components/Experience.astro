@@ -1,29 +1,17 @@
 ---
+import { EXPERIENCE } from "../utils/Experiences.ts";
+import Container from "./Container.astro";
 import ExperienceItem from "./ExperienceItem.astro";
-
-const EXPERIENCE = [
-  {
-    date: "December 2022 - Present",
-    title: "Full stack developer - Python",
-    description:
-      "I developed an entire system for a gas distribution company called Nalux S.A. located in San Juan, Argentina. It was a managment desktop app with data analysis developed with Python and MongoDB.",
-    link: "https://github.com/LMHV/python_nalux_app",
-  },
-  {
-    date: "September 2022 - October 2022",
-    title: "Unit Testing - Selenium",
-    description:
-      "I did an internship on a company called Popapp.io - Tally located in San Juan, Argentina. It was a restaurant managment web app where I developed a few python scripts with selenium to test the proper operation of the page.",
-    link: "https://github.com",
-  },
-];
 ---
 
 <ol class="relative border-s border-gray-200 ml-3">
+  <div class="absolute -left-1 -top-0.5 rounded-full bg-white size-2"></div>
   {
     EXPERIENCE.map((experience) => (
-      <li class="mb-10 ms-4">
-        <ExperienceItem {...experience} />
+      <li class="mb-6 ms-4">
+        <Container class="px-10 py-5">  
+          <ExperienceItem {...experience} />
+        </Container>
       </li>
     ))
   }

@@ -1,6 +1,6 @@
 ---
-import Header from "../components/Header.astro";
 import Footer from "@/components/Footer.astro";
+import Header from "../components/Header.astro";
 import "@fontsource-variable/onest";
 
 interface Props {
@@ -14,32 +14,33 @@ const { title } = Astro.props;
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content="Portfolio de Luis Matias Herrero desarrollado con Astro v4." />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
 	<body>
-		<Header />
 		<slot />
 		<Footer />
 	</body>
 </html>
 
 <style is:global>
+
 	:root {
-		color-scheme: light dark;
+		color-scheme: dark;
 	}
-	html {
-		scroll-behavior: smooth;
-	}
+
 	body {
 		font-family: "Onest Variable", system-ui, sans-serif;
-		background: linear-gradient(145deg, #0b0a10, #1b1b1b);
+		background: linear-gradient(145deg, #0b0a10, #353535);
 		display: flex;
 		flex-direction: column;
-		height: 100%;
+	}
+	
+	html {
+		scroll-behavior: smooth;
 	}
 
 	@media (prefers-reduced-motion: reduce) {
@@ -47,4 +48,5 @@ const { title } = Astro.props;
 			scroll-behavior: auto;
 		}
 	}
+
 </style>

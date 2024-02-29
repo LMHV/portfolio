@@ -1,15 +1,15 @@
-import React from '../components/icons/React.astro'
-import Python from '../components/icons/Python.astro'
-import MongoDB from '../components/icons/MongoDB.astro'
-import Qt from '../components/icons/Qt.astro'
 import Bootstrap from '@/components/icons/Bootstrap.astro'
-import Javascript from '@/components/icons/Javascript.astro'
-import Html from '@/components/icons/Html.astro'
 import Css from '@/components/icons/Css.astro'
-import Nodejs from '@/components/icons/Nodejs.astro'
+import Dart from '@/components/icons/Dart.astro'
 import Expressjs from '@/components/icons/Expressjs.astro'
 import Flutter from '@/components/icons/Flutter.astro'
-import Dart from '@/components/icons/Dart.astro'
+import Html from '@/components/icons/Html.astro'
+import Javascript from '@/components/icons/Javascript.astro'
+import Nodejs from '@/components/icons/Nodejs.astro'
+import MongoDB from '../components/icons/MongoDB.astro'
+import Python from '../components/icons/Python.astro'
+import Qt from '../components/icons/Qt.astro'
+import React from '@/components/icons/React.astro'
 
 export const TAGS = {
   REACT: {
