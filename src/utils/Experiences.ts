@@ -3,9 +3,9 @@ export const EXPERIENCE = [
     date: "March 2024 - Present",
     company: "Recursiva",
     place: "Argentina",
-    title: "Full stack Developer",
-    description: "",
-    link: "",
+    title: "Full stack - React / Nest / MongoDB",
+    description: "At Recursiva, I'm worked as part of the developer team that focuses on create/refactor/optimize features for different projects. Tech's used: React - Redux - Nestjs - MongoDB - Typescript.",
+    link: "https://recursiva.com.ar/",
   },
   {
     date: "December 2022 - March 2024",
